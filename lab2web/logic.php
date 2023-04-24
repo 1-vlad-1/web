@@ -41,6 +41,12 @@ if (key_exists('saveFilter', $_GET)) {
         $filterValue['description'] = $_GET['description'];
     }
 
+    if ($_GET["year"]) {
+        $filterClause[] = "picture.year_of_creation = :year_of_creation";
+        $filterValue['year_of_creation'] = $_GET['year'];
+    }
+
+
 
 
     if (count($filterClause)) {

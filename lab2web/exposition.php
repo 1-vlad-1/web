@@ -224,18 +224,26 @@ require_once 'logic.php';
           </div>
         </div>
 
-        <div>
-          <h3 style="text-align:  center;">По описанию: </h3>
-          <div class="mb-3">
-            <input class="form-control" name="description" id="3" placeholder="Введите описание картины:" value="<?php if (isset($_GET['description']))
+
+        <h3 style="text-align:  center;">По описанию: </h3>
+        <div class="mb-3">
+          <input type="text" class="form-control" name="description" id="3" placeholder="Введите описание картины:" value="<?php if (isset($_GET['description']))
           echo $_GET['description'] ?>">
+
+        </div>
+
+        <div>
+          <h3 style="text-align:  center;">По году создания: </h3>
+          <div class="mb-3">
+            <input type="number" class="form-control" name="year" id="4" placeholder="Введите год создания:" value="<?php if (isset($_GET['year']))
+          echo $_GET['year'] ?>">
 
           </div>
 
           <div style="display: flex; justify-content: center">
             <button class="btn btn-primary" name="saveFilter">Применить фильтр</button>
             <button
-              onclick="document.getElementById('1').value=''; document.getElementById('2').value=''; document.getElementById('3').value='';"
+              onclick="document.getElementById('1').value=''; document.getElementById('2').value=''; document.getElementById('3').value=''; document.getElementById('4').value='';"
               class="btn btn-danger" name="clearFilter">Очистить фильтр</button>
           </div>
         </div>
